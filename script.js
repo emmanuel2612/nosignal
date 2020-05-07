@@ -28,10 +28,11 @@ window.onload = () => {
 
     lockin.onclick = () => {
 
-        /*setTimeout(function () {*/
-            player.style.transform = "translate(0%)";
+        player.style.transform = "translate(0%)";
+
+        setTimeout(function () {
             document.documentElement.style.overflowY = "hidden";
-      /*  }, 300);*/
+        }, 350);
 
     }
 
@@ -39,6 +40,7 @@ window.onload = () => {
 
     close.onclick = () => {
 
+        
         player.style.transform = "translate(-100%)";
         document.documentElement.style.overflowY = "scroll";
 
