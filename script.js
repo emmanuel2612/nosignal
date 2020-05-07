@@ -68,7 +68,7 @@ window.onload = () => {
 
             setTimeout(function (){
                 content.style.opacity = "0";
-                }, 50);
+                }, 10);
 
             setTimeout(function () {
                 content.style.display = "none";
@@ -95,7 +95,7 @@ window.onload = () => {
 
             setTimeout(function () {
                 nav.style.height = "10vh";
-            }, 50);
+            }, 10);
 
 
         }
