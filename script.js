@@ -3,20 +3,20 @@ window.onload = () => {
     var body = document.getElementsByTagName("body")[0];
 
 
-    var play = document.getElementById("play");
-    var pause = document.getElementById("pause");
+    var play = document.getElementById("playcontainer");
+    var pause = document.getElementById("pausecontainer");
     var lockin = document.getElementById("lockin");
-    var player = document.getElementById("player");
+    var player = document.getElementById("playerwindow");
 
     /* TOGGLE BETWEEN PLAY & PAUSE*/
 
     play.onclick = () => {
         play.style.display = "none";
-        pause.style.display = "block";
+        pause.style.display = "flex";
 
         pause.onclick = () => {
             pause.style.display = "none";
-            play.style.display = "block";
+            play.style.display = "flex";
         }
     }
 
@@ -28,11 +28,19 @@ window.onload = () => {
 
     lockin.onclick = () => {
 
-        setTimeout(function () {
-            player.style.opacity = "1";
-        }, 300);
+        /*setTimeout(function () {*/
+            player.style.transform = "translate(0%)";
+            document.documentElement.style.overflowY = "hidden";
+      /*  }, 300);*/
 
-        player.style.display = "flex";
+    }
+
+    var close = document.getElementById("close");
+
+    close.onclick = () => {
+
+        player.style.transform = "translate(-100%)";
+        document.documentElement.style.overflowY = "scroll";
 
     }
 
