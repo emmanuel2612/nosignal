@@ -56,13 +56,23 @@ window.onload = () => {
 
         var menu = document.getElementById("menu");
         var nav = document.getElementById("mobilenav");
+        var content = document.getElementById("mobile-content");
 
         menu.classList.toggle("toggle");
 
 
-        if (nav.style.display === "block") {
+        if (nav.style.display === "flex") {
 
+            
             nav.style.height = "0vh";
+
+            setTimeout(function (){
+                content.style.opacity = "0";
+                }, 50);
+
+            setTimeout(function () {
+                content.style.display = "none";
+            }, 200);
 
             setTimeout(function () {
                 nav.style.display = "none";
@@ -72,10 +82,19 @@ window.onload = () => {
 
         } else {
 
-            nav.style.display = "block";
+            nav.style.display = "flex";
+
+            setTimeout(function (){
+            content.style.opacity = "1";
+            }, 150);
 
             setTimeout(function () {
-                nav.style.height = "100vh";
+                content.style.display = "flex";
+            }, 100);
+           
+
+            setTimeout(function () {
+                nav.style.height = "10vh";
             }, 50);
 
 
